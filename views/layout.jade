@@ -1,0 +1,40 @@
+include mixins.jade
+
+doctype
+html(lang="en")
+
+head
+    title #{websiteTitle}
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+body
+
+  +bar().barOne
+
+    div.headerPanel
+      div.title
+        h1 #{websiteName}
+      nav
+        +list(links).menuParent
+
+     div.sliderPanel
+      +slider().mainSlider
+        +slide().slide_xshot
+          img(src= "images/xshot.png")
+          h2 xshot
+
+  +bar().barTwo
+
+     div.bioContainer
+
+      div.title
+        h1.sub I'm Connor Elsea.
+        h3.sub #{subtitle}
+
+      div.bottom
+
+        div.paragraph
+          p #{bio}
+
+        div.skills
+          +skillList(skills)

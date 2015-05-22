@@ -1,0 +1,49 @@
+//-
+	Creates a list of words using ul and li
+	from the given array,  giving  each  of
+	them a class specified  when  the mixin
+	is called.
+
+mixin list(list)
+	ul
+		each val in list
+			li(class!=attributes.class)= val
+
+//-
+	Creates the commonly used bar div and
+	creates a container inside of it.
+
+mixin bar()
+	div.bar(class!=attributes.class)
+		div.container
+			if block
+				block
+			else
+				p.error No content provided
+
+//-
+	Creates a singular slide from the given
+	information
+
+mixin slide()
+	div.slide(class!=attributes.class)
+		if block
+			block
+		else
+			p.error No content in slide
+
+mixin slider()
+	div.slider(class!=attributes.class)
+		if block
+			block
+		else
+			p.error No slides given to slider
+
+
+mixin skill(skill, index)
+	h5 #{skills[index].language}
+	div(class= skills[index].level)
+
+mixin skillList(skills)
+	each val, index in skills
+		+skill(skills, index)

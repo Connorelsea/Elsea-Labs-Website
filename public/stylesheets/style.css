@@ -1,0 +1,255 @@
+/*
+ * Import nib
+ */
+/*
+ * Grab a custom font from Google
+ */
+@import url("http://fonts.googleapis.com/css?family=Quicksand");
+/*
+ * Nib provides a CSS reset
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+/*
+ * Fonts
+ */
+@font-face {
+  font-family: Helvetica;
+  font-weight: light;
+  src: url("../../fonts/light.otf") format("opentype");
+}
+@font-face {
+  font-family: Helvetica;
+  font-weight: bold;
+  src: url("../../fonts/bold.otf") format("opentype");
+}
+/*
+ * Import
+ */
+/*
+ * Colors
+ */
+/*
+ * Generalized bars
+ */
+.bar {
+  width: 100%;
+}
+.bar .container {
+  margin: 0 auto;
+  width: 980px;
+}
+/*
+ * Style the navigation bar
+ */
+nav ul li {
+  display: inline-block;
+}
+/*
+ * First bar
+ */
+.barOne {
+  padding-top: 20px;
+  background-color: #eee;
+  font-family: Helvetica;
+}
+.barOne .headerPanel {
+  font-family: sans-serif;
+  color: #385397;
+  zoom: 1;
+}
+.barOne .headerPanel:before,
+.barOne .headerPanel:after {
+  content: "";
+  display: table;
+}
+.barOne .headerPanel:after {
+  clear: both;
+}
+.barOne .headerPanel .title {
+  font-family: Helvetica;
+  font-size: 4em;
+  font-weight: bold;
+  float: left;
+}
+.barOne .headerPanel nav {
+  float: right;
+}
+.barOne .headerPanel nav ul li {
+  font-family: Helvetica;
+  font-size: 1.3em;
+  font-weight: light;
+  padding-left: 40px;
+  padding-top: 10px;
+}
+.barOne .sliderPanel {
+  padding-top: 80px;
+  padding-bottom: 120px;
+}
+.barOne .sliderPanel .slide_xshot img {
+  padding-left: 50px;
+}
+.barOne .sliderPanel .slide_xshot h2 {
+  font-size: 7em;
+  font-family: Helvetica;
+  font-weight: light;
+  color: #385397;
+  float: right;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(50%);
+  -moz-transform: translateY(50%);
+  -o-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+}
+.barTwo {
+  background-color: #385397;
+}
+.barTwo .bioContainer {
+  padding: 60px;
+}
+.barTwo .bioContainer .title {
+  font-family: Helvetica;
+}
+.barTwo .bioContainer .title .sub {
+  padding-bottom: 10px;
+}
+.barTwo .bioContainer .title h1 {
+  color: #fff;
+  font-size: 3em;
+  font-weight: bold;
+}
+.barTwo .bioContainer .title h3 {
+  color: #849bd4;
+  font-size: 1.05em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+.barTwo .bioContainer .bottom {
+  zoom: 1;
+  font-family: Helvetica;
+}
+.barTwo .bioContainer .bottom:before,
+.barTwo .bioContainer .bottom:after {
+  content: "";
+  display: table;
+}
+.barTwo .bioContainer .bottom:after {
+  clear: both;
+}
+.barTwo .bioContainer .bottom .paragraph {
+  float: left;
+  width: 50%;
+  color: #fff;
+  font-size: 1.3em;
+  font-weight: light;
+  line-height: 1.5em;
+}
+.barTwo .bioContainer .bottom .skills {
+  float: right;
+}
+/*
+ * Style error messages
+ */
+.error {
+  display: inline;
+  padding: 10px;
+  color: #800000;
+  font-family: sans-serif;
+  background-color: #ffb2b2;
+  border: 1px solid #800000;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  width: 200px;
+}
