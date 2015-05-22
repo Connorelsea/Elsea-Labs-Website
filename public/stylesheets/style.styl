@@ -66,6 +66,14 @@ third-blue = #385397
   to
     width(70%)
 
+@keyframes download-button-fade
+  from
+    background-color white
+    color third-blue
+  to
+    background-color third-blue
+    color white
+    
 /*
  * Generalized bars
  */
@@ -133,16 +141,50 @@ nav
       padding-bottom 120px
       
       .slide_xshot
+        clearfix()
+        
         img
           padding-left 50px
-        h2
-          font-size 7em
-          font-family Helvetica
-          font-weight light
-          color third-blue
-          float right
           
-          verticalCenter()
+        .group
+            width(300px)
+            float right
+            verticalCenter()
+          
+          .title
+            
+            h2
+              font-size 7em
+              font-family Helvetica
+              font-weight light
+              color third-blue
+              text-align center
+          
+          .download
+            width(140px)
+            height(25px)
+            padding 15px
+            margin 0 auto
+            margin-top 20px
+            cursor: pointer
+
+            color third-blue
+            border 2px solid third-blue
+            border-radius 5px
+            
+            p
+              font-size 1.5em
+              font-family Helvetica
+              font-weight light
+              text-align center
+            
+          .download:hover
+            animation-name download-button-fade
+            animation-duration .5s
+            animation-fill-mode forwards
+            
+            
+
 
 /*
  * Bar two contains the portfolio
@@ -214,7 +256,6 @@ nav
             
             .levelInner
               float left
-              width(0px)
               height(5px)
               background-color light-blue
             
