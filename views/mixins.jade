@@ -41,8 +41,11 @@ mixin slider()
 
 
 mixin skill(skill, index)
-	h5 #{skills[index].language}
-	div(class= skills[index].level)
+	div.skillGroup
+		div.languageContainer
+			h5 #{skills[index].language}
+		div.levelContainer
+			div(class= skills[index].level).levelInner
 
 mixin skillList(skills)
 	each val, index in skills

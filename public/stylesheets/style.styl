@@ -46,6 +46,27 @@ light-blue = #849bd4
 third-blue = #385397
 
 /*
+ *
+ */
+@keyframes bar-slide-hundred
+  from
+    width(0)
+  to
+    width(100%)
+
+@keyframes bar-slide-ninety
+  from
+    width(0)
+  to
+    width(85%)
+
+@keyframes bar-slide-eighty
+  from
+    width(0)
+  to
+    width(70%)
+
+/*
  * Generalized bars
  */
  
@@ -123,17 +144,22 @@ nav
           
           verticalCenter()
 
+/*
+ * Bar two contains the portfolio
+ * and skill-based information.
+ */
 .barTwo
   background-color third-blue
   
   .bioContainer
-    padding 60px
+    paddingHorizontal(60px)
+    paddingVertical(100px)
 
     .title
       font-family Helvetica
       
       .sub
-        padding-bottom 10px
+        padding-bottom 22px
 
       h1
         color white
@@ -162,7 +188,50 @@ nav
         
       .skills
         float right
-      
+        
+        .skillGroup
+          display block
+          padding-bottom 10px
+          clearfix()
+
+          .languageContainer
+            width(100px)
+            padding-right 30px
+            float left
+            clearfix()
+
+            h5
+              float right
+              font-family Helvetica
+              font-weight bold
+              color white
+            
+          .levelContainer
+            float right
+            margin-top 5px
+            width(200px)
+            height(5px)
+            
+            .levelInner
+              float left
+              width(0px)
+              height(5px)
+              background-color light-blue
+            
+            .hundred
+              animation-name bar-slide-hundred
+              animationDetails()
+              
+            .ninety
+              animation-name bar-slide-ninety
+              animationDetails()
+              
+            .eighty
+              animation-name bar-slide-eighty
+              animationDetails()
+              
+
+
 /*
  * Style error messages
  */

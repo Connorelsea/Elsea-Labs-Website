@@ -119,14 +119,21 @@ a img {
  * Colors
  */
 /*
+ *
+ */
+/*
  * Generalized bars
  */
 .bar {
   width: 100%;
+  min-width: 100%;
+  max-width: 100%;
 }
 .bar .container {
   margin: 0 auto;
   width: 980px;
+  min-width: 980px;
+  max-width: 980px;
 }
 /*
  * Style the navigation bar
@@ -141,11 +148,23 @@ nav ul li {
   padding-top: 20px;
   background-color: #eee;
   font-family: Helvetica;
+/*
+     * Header Panel consists of the
+     * title and the navigation.
+     */
+/*
+     * The slider panel and the slides.
+     * Will think of ways to make this
+     * more dynamic in the future.
+     */
 }
 .barOne .headerPanel {
   font-family: sans-serif;
   color: #385397;
   zoom: 1;
+/*
+       * The navigation and its elements
+       */
 }
 .barOne .headerPanel:before,
 .barOne .headerPanel:after {
@@ -192,17 +211,24 @@ nav ul li {
   -ms-transform: translateY(50%);
   transform: translateY(50%);
 }
+/*
+ * Bar two contains the portfolio
+ * and skill-based information.
+ */
 .barTwo {
   background-color: #385397;
 }
 .barTwo .bioContainer {
-  padding: 60px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .barTwo .bioContainer .title {
   font-family: Helvetica;
 }
 .barTwo .bioContainer .title .sub {
-  padding-bottom: 10px;
+  padding-bottom: 22px;
 }
 .barTwo .bioContainer .title h1 {
   color: #fff;
@@ -231,6 +257,8 @@ nav ul li {
 .barTwo .bioContainer .bottom .paragraph {
   float: left;
   width: 50%;
+  min-width: 50%;
+  max-width: 50%;
   color: #fff;
   font-size: 1.3em;
   font-weight: light;
@@ -238,6 +266,142 @@ nav ul li {
 }
 .barTwo .bioContainer .bottom .skills {
   float: right;
+}
+.barTwo .bioContainer .bottom .skills .skillGroup {
+  display: block;
+  padding-bottom: 10px;
+  zoom: 1;
+}
+.barTwo .bioContainer .bottom .skills .skillGroup:before,
+.barTwo .bioContainer .bottom .skills .skillGroup:after {
+  content: "";
+  display: table;
+}
+.barTwo .bioContainer .bottom .skills .skillGroup:after {
+  clear: both;
+}
+.barTwo .bioContainer .bottom .skills .skillGroup .languageContainer {
+  width: 100px;
+  min-width: 100px;
+  max-width: 100px;
+  padding-right: 30px;
+  float: left;
+  zoom: 1;
+}
+.barTwo .bioContainer .bottom .skills .skillGroup .languageContainer:before,
+.barTwo .bioContainer .bottom .skills .skillGroup .languageContainer:after {
+  content: "";
+  display: table;
+}
+.barTwo .bioContainer .bottom .skills .skillGroup .languageContainer:after {
+  clear: both;
+}
+.barTwo .bioContainer .bottom .skills .skillGroup .languageContainer h5 {
+  float: right;
+  font-family: Helvetica;
+  font-weight: bold;
+  color: #fff;
+}
+.barTwo .bioContainer .bottom .skills .skillGroup .levelContainer {
+  float: right;
+  margin-top: 5px;
+  width: 200px;
+  min-width: 200px;
+  max-width: 200px;
+  height: 5px;
+  min-height: 5px;
+  max-height: 5px;
+}
+.barTwo .bioContainer .bottom .skills .skillGroup .levelContainer .levelInner {
+  float: left;
+  width: 0px;
+  min-width: 0px;
+  max-width: 0px;
+  height: 5px;
+  min-height: 5px;
+  max-height: 5px;
+  background-color: #849bd4;
+}
+.barTwo .bioContainer .bottom .skills .skillGroup .levelContainer .hundred {
+  -webkit-animation-name: bar-slide-hundred;
+  -moz-animation-name: bar-slide-hundred;
+  -o-animation-name: bar-slide-hundred;
+  -ms-animation-name: bar-slide-hundred;
+  animation-name: bar-slide-hundred;
+  -webkit-animation-timing-function: ease;
+  -moz-animation-timing-function: ease;
+  -o-animation-timing-function: ease;
+  -ms-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  -o-animation-duration: 3s;
+  -ms-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  -o-animation-delay: 0.3s;
+  -ms-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.barTwo .bioContainer .bottom .skills .skillGroup .levelContainer .ninety {
+  -webkit-animation-name: bar-slide-ninety;
+  -moz-animation-name: bar-slide-ninety;
+  -o-animation-name: bar-slide-ninety;
+  -ms-animation-name: bar-slide-ninety;
+  animation-name: bar-slide-ninety;
+  -webkit-animation-timing-function: ease;
+  -moz-animation-timing-function: ease;
+  -o-animation-timing-function: ease;
+  -ms-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  -o-animation-duration: 3s;
+  -ms-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  -o-animation-delay: 0.3s;
+  -ms-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.barTwo .bioContainer .bottom .skills .skillGroup .levelContainer .eighty {
+  -webkit-animation-name: bar-slide-eighty;
+  -moz-animation-name: bar-slide-eighty;
+  -o-animation-name: bar-slide-eighty;
+  -ms-animation-name: bar-slide-eighty;
+  animation-name: bar-slide-eighty;
+  -webkit-animation-timing-function: ease;
+  -moz-animation-timing-function: ease;
+  -o-animation-timing-function: ease;
+  -ms-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-duration: 3s;
+  -moz-animation-duration: 3s;
+  -o-animation-duration: 3s;
+  -ms-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  -o-animation-delay: 0.3s;
+  -ms-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  -ms-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 /*
  * Style error messages
@@ -252,4 +416,150 @@ nav ul li {
   -webkit-border-radius: 5px;
   border-radius: 5px;
   width: 200px;
+  min-width: 200px;
+  max-width: 200px;
+}
+@-moz-keyframes bar-slide-hundred {
+  from {
+    width: 0;
+    min-width: 0;
+    max-width: 0;
+  }
+  to {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+@-webkit-keyframes bar-slide-hundred {
+  from {
+    width: 0;
+    min-width: 0;
+    max-width: 0;
+  }
+  to {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+@-o-keyframes bar-slide-hundred {
+  from {
+    width: 0;
+    min-width: 0;
+    max-width: 0;
+  }
+  to {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+@keyframes bar-slide-hundred {
+  from {
+    width: 0;
+    min-width: 0;
+    max-width: 0;
+  }
+  to {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+@-moz-keyframes bar-slide-ninety {
+  from {
+    width: 0;
+    min-width: 0;
+    max-width: 0;
+  }
+  to {
+    width: 85%;
+    min-width: 85%;
+    max-width: 85%;
+  }
+}
+@-webkit-keyframes bar-slide-ninety {
+  from {
+    width: 0;
+    min-width: 0;
+    max-width: 0;
+  }
+  to {
+    width: 85%;
+    min-width: 85%;
+    max-width: 85%;
+  }
+}
+@-o-keyframes bar-slide-ninety {
+  from {
+    width: 0;
+    min-width: 0;
+    max-width: 0;
+  }
+  to {
+    width: 85%;
+    min-width: 85%;
+    max-width: 85%;
+  }
+}
+@keyframes bar-slide-ninety {
+  from {
+    width: 0;
+    min-width: 0;
+    max-width: 0;
+  }
+  to {
+    width: 85%;
+    min-width: 85%;
+    max-width: 85%;
+  }
+}
+@-moz-keyframes bar-slide-eighty {
+  from {
+    width: 0;
+    min-width: 0;
+    max-width: 0;
+  }
+  to {
+    width: 70%;
+    min-width: 70%;
+    max-width: 70%;
+  }
+}
+@-webkit-keyframes bar-slide-eighty {
+  from {
+    width: 0;
+    min-width: 0;
+    max-width: 0;
+  }
+  to {
+    width: 70%;
+    min-width: 70%;
+    max-width: 70%;
+  }
+}
+@-o-keyframes bar-slide-eighty {
+  from {
+    width: 0;
+    min-width: 0;
+    max-width: 0;
+  }
+  to {
+    width: 70%;
+    min-width: 70%;
+    max-width: 70%;
+  }
+}
+@keyframes bar-slide-eighty {
+  from {
+    width: 0;
+    min-width: 0;
+    max-width: 0;
+  }
+  to {
+    width: 70%;
+    min-width: 70%;
+    max-width: 70%;
+  }
 }

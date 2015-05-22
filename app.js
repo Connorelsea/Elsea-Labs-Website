@@ -33,29 +33,29 @@ var subtitle = "Full Stack Engineer"
 var skills = [
 	{
 		language: "Java",
-		percent: 100
+		level: "hundred"
 	},
 	{
 		language: "HTML5",
-		level: 100
+		level: "hundred"
 	},
 	{
 		language: "NODE.JS",
-		level: 100
+		level: "hundred"
 	},
 	{
-		language: "HASKELL",
-		level: 90
+		language: "Haskell",
+		level: "ninety"
 	},
 	{
 		language: "C/C++",
-		level: 80
+		level: "eighty"
 	}
 ]
 
 app.get('/', function(req, res)
 {
-	res.render('index',
+	res.render('layout',
 	{
 		websiteTitle: "Elsea",
 		websiteName:  "Elsea",
