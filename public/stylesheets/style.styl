@@ -46,7 +46,8 @@ light-blue = #849bd4
 third-blue = #385397
 
 /*
- *
+ * Bar sliding animations present in the
+ * biography section in the skill list.
  */
 @keyframes bar-slide-hundred
   from
@@ -66,14 +67,22 @@ third-blue = #385397
   to
     width(70%)
 
-@keyframes download-button-fade
+/*
+ * Blinking text animation
+ */
+
+@keyframes typing
   from
-    background-color white
-    color third-blue
+    width(0)
   to
-    background-color third-blue
-    color white
+    width(8.7em)
     
+@keyframes blink
+  from, to
+    border-color transparent
+  50%
+    border-color white
+
 /*
  * Generalized bars
  */

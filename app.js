@@ -22,47 +22,18 @@ app.use(stylus.middleware(
 ))
 app.use(express.static(__dirname + '/public'))
 
-var linkNames = [
-	"home", "software", "blog", "about"
-]
-
-var bio = "I’m a 17 year old student and software developer from Baton Rouge, Louisiana with a passion for beautiful interfaces, game design, software development, and art."
-
-var subtitle = "Full Stack Engineer"
-
-var skills = [
-	{
-		language: "Java",
-		level: "hundred"
-	},
-	{
-		language: "HTML5",
-		level: "hundred"
-	},
-	{
-		language: "NODE.JS",
-		level: "hundred"
-	},
-	{
-		language: "Haskell",
-		level: "ninety"
-	},
-	{
-		language: "C/C++",
-		level: "eighty"
-	}
-]
+var data = require(__dirname + "/data.js")
 
 app.get('/', function(req, res)
 {
-	res.render('layout',
+	res.render('layout', 
 	{
 		websiteTitle: "Elsea",
 		websiteName:  "Elsea",
-		links: linkNames,
-		bio: bio,
-		subtitle: subtitle,
-		skills: skills
+		links: data.linkNames,
+		bio: data.bio,
+		subtitle: data.subtitle,
+		skills: data.skills
 	})
 });
 
