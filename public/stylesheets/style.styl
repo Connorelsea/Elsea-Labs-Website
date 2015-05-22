@@ -68,20 +68,15 @@ third-blue = #385397
     width(70%)
 
 /*
- * Blinking text animation
+ * Button animations throughout the website.
  */
-
-@keyframes typing
+@keyframes download-button-fade
   from
-    width(0)
+    background-color white
+    color third-blue
   to
-    width(8.7em)
-    
-@keyframes blink
-  from, to
-    border-color transparent
-  50%
-    border-color white
+    background-color third-blue
+    color white
 
 /*
  * Generalized bars
@@ -93,7 +88,8 @@ third-blue = #385397
   .container
     margin 0 auto
     width  980px
-  
+
+
 
 /*
  * Style the navigation bar
@@ -108,7 +104,7 @@ nav
  * First bar
  */
  .barOne
-    padding-top 20px
+    padding-top 12px
     background-color bg-grey
     font-family Helvetica
    
@@ -119,26 +115,34 @@ nav
     .headerPanel
       font-family sans-serif
       color third-blue
-      clearfix()
-     
-      .title
-        font-family Helvetica
-        font-size 4em
-        font-weight bold
-        float left
       
-      /*
-       * The navigation and its elements
-       */
-      nav
-        float right
-        
-        ul li
+      .headerContainer
+        height(30px)
+        clearfix()
+     
+        .title
           font-family Helvetica
-          font-size 1.3em
-          font-weight light
-          padding-left 40px
-          padding-top 10px
+          font-size 4em
+          font-weight bold
+          float left
+          letter-spacing -.04em
+          
+          img
+            width(250px)
+        
+        /*
+         * The navigation and its elements
+         */
+        nav
+          margin-top 20px
+          float right
+          
+          ul li
+            font-family Helvetica
+            font-size 1.3em
+            font-weight light
+            padding-left 40px
+            padding-top 10px
     
     /*
      * The slider panel and the slides.
@@ -146,8 +150,8 @@ nav
      * more dynamic in the future.
      */
     .sliderPanel
-      padding-top 80px
-      padding-bottom 120px
+      padding-top 120px
+      padding-bottom 160px
       
       .slide_xshot
         clearfix()
@@ -168,6 +172,7 @@ nav
               font-weight light
               color third-blue
               text-align center
+              letter-spacing -.04em
           
           .download
             width(140px)
@@ -178,8 +183,10 @@ nav
             cursor: pointer
 
             color third-blue
-            border 2px solid third-blue
+            border 1px solid third-blue
             border-radius 5px
+            
+            transition: all 0.3s ease-in-out
             
             p
               font-size 1.5em
@@ -188,9 +195,8 @@ nav
               text-align center
             
           .download:hover
-            animation-name download-button-fade
-            animation-duration .5s
-            animation-fill-mode forwards
+            background-color third-blue
+            color white
             
             
 

@@ -126,9 +126,6 @@ a img {
  * Button animations throughout the website.
  */
 /*
- * Blinking text animation
- */
-/*
  * Generalized bars
  */
 .bar {
@@ -152,7 +149,7 @@ nav ul li {
  * First bar
  */
 .barOne {
-  padding-top: 20px;
+  padding-top: 12px;
   background-color: #eee;
   font-family: Helvetica;
 /*
@@ -168,29 +165,41 @@ nav ul li {
 .barOne .headerPanel {
   font-family: sans-serif;
   color: #385397;
+}
+.barOne .headerPanel .headerContainer {
+  height: 30px;
+  min-height: 30px;
+  max-height: 30px;
   zoom: 1;
 /*
-       * The navigation and its elements
-       */
+         * The navigation and its elements
+         */
 }
-.barOne .headerPanel:before,
-.barOne .headerPanel:after {
+.barOne .headerPanel .headerContainer:before,
+.barOne .headerPanel .headerContainer:after {
   content: "";
   display: table;
 }
-.barOne .headerPanel:after {
+.barOne .headerPanel .headerContainer:after {
   clear: both;
 }
-.barOne .headerPanel .title {
+.barOne .headerPanel .headerContainer .title {
   font-family: Helvetica;
   font-size: 4em;
   font-weight: bold;
   float: left;
+  letter-spacing: -0.04em;
 }
-.barOne .headerPanel nav {
+.barOne .headerPanel .headerContainer .title img {
+  width: 250px;
+  min-width: 250px;
+  max-width: 250px;
+}
+.barOne .headerPanel .headerContainer nav {
+  margin-top: 20px;
   float: right;
 }
-.barOne .headerPanel nav ul li {
+.barOne .headerPanel .headerContainer nav ul li {
   font-family: Helvetica;
   font-size: 1.3em;
   font-weight: light;
@@ -198,8 +207,8 @@ nav ul li {
   padding-top: 10px;
 }
 .barOne .sliderPanel {
-  padding-top: 80px;
-  padding-bottom: 120px;
+  padding-top: 120px;
+  padding-bottom: 160px;
 }
 .barOne .sliderPanel .slide_xshot {
   zoom: 1;
@@ -234,6 +243,7 @@ nav ul li {
   font-weight: light;
   color: #385397;
   text-align: center;
+  letter-spacing: -0.04em;
 }
 .barOne .sliderPanel .slide_xshot .download {
   width: 140px;
@@ -247,9 +257,14 @@ nav ul li {
   margin-top: 20px;
   cursor: pointer;
   color: #385397;
-  border: 2px solid #385397;
+  border: 1px solid #385397;
   -webkit-border-radius: 5px;
   border-radius: 5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .barOne .sliderPanel .slide_xshot .download p {
   font-size: 1.5em;
@@ -258,21 +273,8 @@ nav ul li {
   text-align: center;
 }
 .barOne .sliderPanel .slide_xshot .download:hover {
-  -webkit-animation-name: download-button-fade;
-  -moz-animation-name: download-button-fade;
-  -o-animation-name: download-button-fade;
-  -ms-animation-name: download-button-fade;
-  animation-name: download-button-fade;
-  -webkit-animation-duration: 0.5s;
-  -moz-animation-duration: 0.5s;
-  -o-animation-duration: 0.5s;
-  -ms-animation-duration: 0.5s;
-  animation-duration: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  -ms-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+  background-color: #385397;
+  color: #fff;
 }
 /*
  * Bar two contains the portfolio
@@ -297,17 +299,6 @@ nav ul li {
   color: #fff;
   font-size: 3em;
   font-weight: bold;
-  width: 8.7em;
-  min-width: 8.7em;
-  max-width: 8.7em;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 0.1em solid #fff;
-  -webkit-animation: typing 2s steps(17, end), blink 1s step-end infinite;
-  -moz-animation: typing 2s steps(17, end), blink 1s step-end infinite;
-  -o-animation: typing 2s steps(17, end), blink 1s step-end infinite;
-  -ms-animation: typing 2s steps(17, end), blink 1s step-end infinite;
-  animation: typing 2s steps(17, end), blink 1s step-end infinite;
 }
 .barTwo .bioContainer .title h3 {
   color: #849bd4;
@@ -672,85 +663,5 @@ nav ul li {
   to {
     background-color: #385397;
     color: #fff;
-  }
-}
-@-moz-keyframes typing {
-  from {
-    width: 0;
-    min-width: 0;
-    max-width: 0;
-  }
-  to {
-    width: 8.7em;
-    min-width: 8.7em;
-    max-width: 8.7em;
-  }
-}
-@-webkit-keyframes typing {
-  from {
-    width: 0;
-    min-width: 0;
-    max-width: 0;
-  }
-  to {
-    width: 8.7em;
-    min-width: 8.7em;
-    max-width: 8.7em;
-  }
-}
-@-o-keyframes typing {
-  from {
-    width: 0;
-    min-width: 0;
-    max-width: 0;
-  }
-  to {
-    width: 8.7em;
-    min-width: 8.7em;
-    max-width: 8.7em;
-  }
-}
-@keyframes typing {
-  from {
-    width: 0;
-    min-width: 0;
-    max-width: 0;
-  }
-  to {
-    width: 8.7em;
-    min-width: 8.7em;
-    max-width: 8.7em;
-  }
-}
-@-moz-keyframes blink {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #fff;
-  }
-}
-@-webkit-keyframes blink {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #fff;
-  }
-}
-@-o-keyframes blink {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #fff;
-  }
-}
-@keyframes blink {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #fff;
   }
 }

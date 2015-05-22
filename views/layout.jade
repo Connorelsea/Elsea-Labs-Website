@@ -12,10 +12,14 @@ body
   +bar().barOne
 
     div.headerPanel
-      div.title
-        h1 #{websiteName}
-      nav
-        +list(links).menuParent
+      div.headerContainer
+
+        div.title
+          img(src= "images/elsea.png")
+          // h1 #{websiteName}
+
+        nav
+          +list(links).menuParent
 
      div.sliderPanel
       +slider().mainSlider
