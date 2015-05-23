@@ -113,19 +113,25 @@ a img {
   src: url("../../fonts/bold.otf") format("opentype");
 }
 /*
- * Import
+ * GLOBAL MIXINS
  */
 /*
- * Colors
+ * GLOBAL COLOR DEFINITIONS
  */
 /*
+ * SKILL BAR ANIMATIONS
+ *
  * Bar sliding animations present in the
  * biography section in the skill list.
  */
 /*
+ * BUTTON ANIMATIONS
+ *
  * Button animations throughout the website.
  */
 /*
+ * ABSTRACTED BAR
+ *
  * Generalized bars
  */
 .bar {
@@ -140,23 +146,35 @@ a img {
   max-width: 980px;
 }
 /*
+ * HTML5 NAV
+ *
  * Style the navigation bar
  */
 nav ul li {
   display: inline-block;
 }
 /*
- * First bar
+ * BAR ONE
+ * 
+ * Bar one consists of the website's
+ * navigation and title as  well  as
+ * a slider featuring information on
+ * currently  important  events  and
+ * products.
  */
 .barOne {
   padding-top: 12px;
   background-color: #eee;
   font-family: Helvetica;
 /*
+     * HEADER PANEL
+     * 
      * Header Panel consists of the
      * title and the navigation.
      */
 /*
+     * SLIDER PANEL
+     *
      * The slider panel and the slides.
      * Will think of ways to make this
      * more dynamic in the future.
@@ -172,6 +190,8 @@ nav ul li {
   max-height: 30px;
   zoom: 1;
 /*
+         * NAVIGATION
+         *
          * The navigation and its elements
          */
 }
@@ -277,6 +297,8 @@ nav ul li {
   color: #fff;
 }
 /*
+ * BAR TWO
+ * 
  * Bar two contains the portfolio
  * and skill-based information.
  */
@@ -288,24 +310,6 @@ nav ul li {
   padding-right: 60px;
   padding-top: 100px;
   padding-bottom: 100px;
-}
-.barTwo .bioContainer .title {
-  font-family: Helvetica;
-}
-.barTwo .bioContainer .title .sub {
-  padding-bottom: 22px;
-}
-.barTwo .bioContainer .title h1 {
-  color: #fff;
-  font-size: 3em;
-  font-weight: bold;
-}
-.barTwo .bioContainer .title h3 {
-  color: #849bd4;
-  font-size: 1.05em;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
 }
 .barTwo .bioContainer .bottom {
   zoom: 1;
@@ -466,7 +470,50 @@ nav ul li {
   animation-fill-mode: forwards;
 }
 /*
- * Style error messages
+ * BAR THREE
+ *
+ * Bar Three consists  of  the  sub-sets
+ * of services that I  provide. They are
+ * represented by large icons.  The  CSS
+ * should be created such that the icons
+ * are easily changeable.
+ */
+.barThree {
+  background-color: #2a417d;
+}
+/*
+ * TITLE STYLES
+ *
+ * Style titles across the  entire  website
+ * Helvetica font. Large white top, smaller
+ * bold bottom with letter spacing and  all
+ * uppercase.
+ */
+.title {
+  font-family: Helvetica;
+}
+.title .sub {
+  padding-bottom: 22px;
+}
+.title .main {
+  color: #fff;
+  font-size: 3em;
+  font-weight: bold;
+}
+.title .subtitle {
+  color: #849bd4;
+  font-size: 1.05em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+/*
+ * ERROR STYLING
+ *
+ * The error message that shows up in
+ * various places in my personal Jade
+ * mixins when something  such  as  a
+ * missing block occurs.
  */
 .error {
   display: inline;

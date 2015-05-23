@@ -28,24 +28,30 @@ global-reset()
   src url("../../fonts/bold.otf") format("opentype")
 
 /*
- * Import
+ * GLOBAL MIXINS
  */
  
 @import "mixins.styl"
 
 /*
- * Colors
+ * GLOBAL COLOR DEFINITIONS
  */
 
-dark-red   = #800000
-light-red  = #FFB2B2
+dark-red    = #800000
+light-red   = #FFB2B2
 
-bg-grey    = #eeeeee
+bg-grey     = #eeeeee
 
-light-blue = #849bd4
-third-blue = #385397
+light-blue  = #849bd4
+dark-blue   = #2a417d
+
+third-blue  = #385397
+second-blue = #ccc
+first-blue  = #ccc
 
 /*
+ * SKILL BAR ANIMATIONS
+ *
  * Bar sliding animations present in the
  * biography section in the skill list.
  */
@@ -68,6 +74,8 @@ third-blue = #385397
     width(70%)
 
 /*
+ * BUTTON ANIMATIONS
+ *
  * Button animations throughout the website.
  */
 @keyframes download-button-fade
@@ -79,6 +87,8 @@ third-blue = #385397
     color white
 
 /*
+ * ABSTRACTED BAR
+ *
  * Generalized bars
  */
  
@@ -92,6 +102,8 @@ third-blue = #385397
 
 
 /*
+ * HTML5 NAV
+ *
  * Style the navigation bar
  */
 
@@ -101,7 +113,13 @@ nav
       display inline-block
       
 /*
- * First bar
+ * BAR ONE
+ * 
+ * Bar one consists of the website's
+ * navigation and title as  well  as
+ * a slider featuring information on
+ * currently  important  events  and
+ * products.
  */
  .barOne
     padding-top 12px
@@ -109,6 +127,8 @@ nav
     font-family Helvetica
    
     /*
+     * HEADER PANEL
+     * 
      * Header Panel consists of the
      * title and the navigation.
      */
@@ -131,6 +151,8 @@ nav
             width(250px)
         
         /*
+         * NAVIGATION
+         *
          * The navigation and its elements
          */
         nav
@@ -145,6 +167,8 @@ nav
             padding-top 10px
     
     /*
+     * SLIDER PANEL
+     *
      * The slider panel and the slides.
      * Will think of ways to make this
      * more dynamic in the future.
@@ -202,6 +226,8 @@ nav
 
 
 /*
+ * BAR TWO
+ * 
  * Bar two contains the portfolio
  * and skill-based information.
  */
@@ -211,24 +237,6 @@ nav
   .bioContainer
     paddingHorizontal(60px)
     paddingVertical(100px)
-
-    .title
-      font-family Helvetica
-      
-      .sub
-        padding-bottom 22px
-
-      h1
-        color white
-        font-size 3em
-        font-weight bold
-        
-      h3
-        color light-blue
-        font-size 1.05em
-        font-weight bold
-        text-transform uppercase
-        letter-spacing .2em
         
     .bottom
       clearfix()
@@ -285,11 +293,54 @@ nav
             .eighty
               animation-name bar-slide-eighty
               animationDetails()
-              
-
 
 /*
- * Style error messages
+ * BAR THREE
+ *
+ * Bar Three consists  of  the  sub-sets
+ * of services that I  provide. They are
+ * represented by large icons.  The  CSS
+ * should be created such that the icons
+ * are easily changeable.
+ */
+        
+.barThree
+  background-color dark-blue
+
+/*
+ * TITLE STYLES
+ *
+ * Style titles across the  entire  website
+ * Helvetica font. Large white top, smaller
+ * bold bottom with letter spacing and  all
+ * uppercase.
+ */
+
+.title
+  font-family Helvetica
+      
+  .sub
+    padding-bottom 22px
+
+  .main
+    color white
+    font-size 3em
+    font-weight bold
+        
+  .subtitle
+    color light-blue
+    font-size 1.05em
+    font-weight bold
+    text-transform uppercase
+    letter-spacing .2em
+    
+/*
+ * ERROR STYLING
+ *
+ * The error message that shows up in
+ * various places in my personal Jade
+ * mixins when something  such  as  a
+ * missing block occurs.
  */
  
 .error

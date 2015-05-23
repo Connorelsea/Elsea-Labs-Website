@@ -50,3 +50,8 @@ mixin skill(skill, index)
 mixin skillList(skills)
 	each val, index in skills
 		+skill(skills, index)
+
+mixin title(x, y)
+	div.title
+		h1.sub.main #{x}
+		h3.sub.subtitle  #{y}
