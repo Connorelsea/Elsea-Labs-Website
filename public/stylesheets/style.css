@@ -488,6 +488,47 @@ nav ul li {
 .barThree {
   background-color: #2a417d;
 }
+.barThree .iconRow {
+  width: 920px;
+  min-width: 920px;
+  max-width: 920px;
+}
+.barThree .iconRow .iconRowContainer {
+  margin: 0 auto;
+  width: 97%;
+  min-width: 97%;
+  max-width: 97%;
+}
+.barThree .iconRow .iconRowContainer .icon {
+  display: inline-block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 140px;
+  min-width: 140px;
+  max-width: 140px;
+}
+.barThree .iconRow .iconRowContainer .icon .link {
+  width: inherit;
+  min-width: inherit;
+  max-width: inherit;
+  text-decoration: none;
+}
+.barThree .iconRow .iconRowContainer .icon .link .image {
+  width: inherit;
+  min-width: inherit;
+  max-width: inherit;
+}
+.barThree .iconRow .iconRowContainer .icon .link .subtitle {
+  padding-top: 20px;
+  font-size: 1.2em;
+  font-family: Helvetica;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: #849bd4;
+}
 /*
  * ICON ROW AND ICON
  *
@@ -495,19 +536,16 @@ nav ul li {
  * and  a  container  to  automatically
  * align them.
  */
-.iconRow {
+.iconRow .iconRowContainer {
   zoom: 1;
 }
-.iconRow:before,
-.iconRow:after {
+.iconRow .iconRowContainer:before,
+.iconRow .iconRowContainer:after {
   content: "";
   display: table;
 }
-.iconRow:after {
+.iconRow .iconRowContainer:after {
   clear: both;
-}
-.iconRow .icon {
-  float: left;
 }
 .icon .image {
   display: block;

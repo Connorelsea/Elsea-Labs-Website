@@ -66,16 +66,17 @@ mixin title(x, y)
 
 mixin icon(icon, subtitle, link)
 	div.icon
-		img.image(src= icon)
-		a.subtitle(href= link)
-			h3 subtitle
+		a.link(href= link)
+			img.image(src= icon)
+			h3.subtitle #{subtitle}
 
 mixin iconRow()
 	div.iconRow
-		if block
-			block
-		else
-			+error("Empty Icon Row.")
+		div.iconRowContainer
+			if block
+				block
+			else
+				+error("Empty Icon Row.")
 
 mixin error(e)
 	p.error e
