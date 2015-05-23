@@ -70,6 +70,11 @@ mixin icon(icon, subtitle, link)
 			img.image(src= icon)
 			h3.subtitle #{subtitle}
 
+mixin clientIcon(icon)
+	div.icon.clientIcon
+		a.link(src= "/services")
+			img.img(src= icon)
+
 mixin iconRow()
 	div.iconRow
 		div.iconRowContainer
@@ -77,6 +82,9 @@ mixin iconRow()
 				block
 			else
 				+error("Empty Icon Row.")
+
+mixin tinyButton(link, text)
+	a.tinyButton(href= link) #{text}
 
 mixin error(e)
 	p.error e

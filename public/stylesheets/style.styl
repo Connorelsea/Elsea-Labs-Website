@@ -1,4 +1,8 @@
 /*
+ * Note, CSS is compiled from Stylus to CSS.
+ */
+
+/*
  * Import nib
  */
 @import 'nib'
@@ -85,7 +89,17 @@ first-blue  = #ccc
   to
     background-color third-blue
     color white
+    
+/*
+ * NAVIGATION BAR ANIMATIONS
+ */
 
+@keyframes nav-button
+  from
+    width(100%)
+  to
+    width(104%)
+    
 /*
  * ABSTRACTED BAR
  *
@@ -103,7 +117,7 @@ first-blue  = #ccc
   width 100%
   
   .container
-    paddingVertical(70px)
+    paddingVertical(100px)
     margin 0 auto
     width  920px
 
@@ -153,7 +167,7 @@ nav
           float left
           letter-spacing -.04em
           
-          img
+          img 
             width(250px)
         
         /*
@@ -171,6 +185,14 @@ nav
             font-weight light
             padding-left 40px
             padding-top 10px
+            
+            transition: all 0.2s ease-in-out
+            
+          ul li:hover
+            cursor pointer
+            font-size 1.7em
+            font-weight bold
+            
     
     /*
      * SLIDER PANEL
@@ -334,16 +356,37 @@ nav
           .subtitle
             padding-top 20px
             
-            font-size 1.2em
-            
+            font-size 1.1em
             font-family Helvetica
             font-weight bold
             text-transform uppercase
             text-align center
+            letter-spacing .2em
             
             color light-blue
 
-  
+/*
+ * BAR FOUR
+ *
+ * Bar four consists of information about
+ * Elsea's clients
+ */
+ 
+.barFour
+  background-color third-blue
+
+/*
+ * BAR FIVE
+ *
+ * Bar five consists of a contact area where
+ * the user can contact me in various  ways.
+ * Social media icons will also  be  present
+ * in this area.
+ */
+ 
+.barFive
+  background-color dark-blue
+
 /*
  * ICON ROW AND ICON
  *
@@ -359,6 +402,7 @@ nav
 
      
 .icon
+  
   .image
     display block
   .subtitle
@@ -390,7 +434,34 @@ nav
     font-weight bold
     text-transform uppercase
     letter-spacing .2em
-    
+
+/*
+ * TINY BUTTON
+ *
+ * The tiny button is a small button
+ * with the same formatting  as  the
+ * subtitles of the titles.
+ */
+ 
+.tinyButton
+  display inline-block
+  paddingVertical(15px)
+  
+  font-family Helvetica
+  font-weight bold
+  font-size .7em
+  
+  color darken(light-blue, 20%)
+  
+  text-transform uppercase
+  letter-spacing .2em
+  text-decoration none
+  
+  transition: all 0.2s ease-in-out
+
+.tinyButton:hover
+  color light-blue
+
 /*
  * ERROR STYLING
  *

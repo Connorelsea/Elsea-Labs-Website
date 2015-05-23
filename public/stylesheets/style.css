@@ -1,4 +1,7 @@
 /*
+ * Note, CSS is compiled from Stylus to CSS.
+ */
+/*
  * Import nib
  */
 /*
@@ -130,6 +133,9 @@ a img {
  * Button animations throughout the website.
  */
 /*
+ * NAVIGATION BAR ANIMATIONS
+ */
+/*
  * ABSTRACTED BAR
  *
  * Generalized bars
@@ -151,8 +157,8 @@ a img {
   max-width: 100%;
 }
 .sub-bar .container {
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   margin: 0 auto;
   width: 920px;
   min-width: 920px;
@@ -238,6 +244,16 @@ nav ul li {
   font-weight: light;
   padding-left: 40px;
   padding-top: 10px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.barOne .headerPanel .headerContainer nav ul li:hover {
+  cursor: pointer;
+  font-size: 1.7em;
+  font-weight: bold;
 }
 .barOne .sliderPanel {
   padding-top: 120px;
@@ -522,12 +538,33 @@ nav ul li {
 }
 .barThree .iconRow .iconRowContainer .icon .link .subtitle {
   padding-top: 20px;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-family: Helvetica;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
+  letter-spacing: 0.2em;
   color: #849bd4;
+}
+/*
+ * BAR FOUR
+ *
+ * Bar four consists of information about
+ * Elsea's clients
+ */
+.barFour {
+  background-color: #385397;
+}
+/*
+ * BAR FIVE
+ *
+ * Bar five consists of a contact area where
+ * the user can contact me in various  ways.
+ * Social media icons will also  be  present
+ * in this area.
+ */
+.barFive {
+  background-color: #2a417d;
 }
 /*
  * ICON ROW AND ICON
@@ -578,6 +615,33 @@ nav ul li {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+}
+/*
+ * TINY BUTTON
+ *
+ * The tiny button is a small button
+ * with the same formatting  as  the
+ * subtitles of the titles.
+ */
+.tinyButton {
+  display: inline-block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 0.7em;
+  color: #5172c2;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.tinyButton:hover {
+  color: #849bd4;
 }
 /*
  * ERROR STYLING
@@ -782,5 +846,53 @@ nav ul li {
   to {
     background-color: #385397;
     color: #fff;
+  }
+}
+@-moz-keyframes nav-button {
+  from {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  to {
+    width: 104%;
+    min-width: 104%;
+    max-width: 104%;
+  }
+}
+@-webkit-keyframes nav-button {
+  from {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  to {
+    width: 104%;
+    min-width: 104%;
+    max-width: 104%;
+  }
+}
+@-o-keyframes nav-button {
+  from {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  to {
+    width: 104%;
+    min-width: 104%;
+    max-width: 104%;
+  }
+}
+@keyframes nav-button {
+  from {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+  to {
+    width: 104%;
+    min-width: 104%;
+    max-width: 104%;
   }
 }
