@@ -99,7 +99,13 @@ first-blue  = #ccc
     margin 0 auto
     width  980px
 
-
+.sub-bar
+  width 100%
+  
+  .container
+    paddingVertical(70px)
+    margin 0 auto
+    width  920px
 
 /*
  * HTML5 NAV
@@ -235,8 +241,6 @@ nav
   background-color third-blue
   
   .bioContainer
-    paddingHorizontal(60px)
-    paddingVertical(100px)
         
     .bottom
       clearfix()
@@ -306,6 +310,26 @@ nav
         
 .barThree
   background-color dark-blue
+  
+/*
+ * ICON ROW AND ICON
+ *
+ * Automated linked and subtitled icons
+ * and  a  container  to  automatically
+ * align them.
+ */
+ 
+.iconRow
+  clearfix()
+
+  .icon
+    float left
+     
+.icon
+  .image
+    display block
+  .subtitle
+    display block
 
 /*
  * TITLE STYLES

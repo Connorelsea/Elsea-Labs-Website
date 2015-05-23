@@ -19,7 +19,15 @@ mixin bar()
 			if block
 				block
 			else
-				p.error No content provided
+				+error("No content provided")
+
+mixin sub-bar()
+	div.sub-bar(class!=attributes.class)
+		div.container
+			if block
+				block
+			else
+				+error("No content provided")
 
 //-
 	Creates a singular slide from the given
@@ -30,14 +38,14 @@ mixin slide()
 		if block
 			block
 		else
-			p.error No content in slide
+			+error("No content in slide")
 
 mixin slider()
 	div.slider(class!=attributes.class)
 		if block
 			block
 		else
-			p.error No slides given to slider
+			+error("No slides given to slider")
 
 
 mixin skill(skill, index)
@@ -55,3 +63,19 @@ mixin title(x, y)
 	div.title
 		h1.sub.main #{x}
 		h3.sub.subtitle  #{y}
+
+mixin icon(icon, subtitle, link)
+	div.icon
+		img.image(src= icon)
+		a.subtitle(href= link)
+			h3 subtitle
+
+mixin iconRow()
+	div.iconRow
+		if block
+			block
+		else
+			+error("Empty Icon Row.")
+
+mixin error(e)
+	p.error e

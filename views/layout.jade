@@ -23,6 +23,7 @@ body
 
      div.sliderPanel
       +slider().mainSlider
+
         +slide().slide_xshot
           img(src= "images/xshot.png")
           div.group
@@ -31,7 +32,7 @@ body
             div.download
               p download
 
-  +bar().barTwo
+  +sub-bar().barTwo
 
      div.bioContainer
 
@@ -44,3 +45,13 @@ body
 
         div.skills
           +skillList(skills)
+
+  +sub-bar().barThree
+
+    +title("Services", "Available for Hire")
+
+    +iconRow()
+      +icon("/etc", "Design", "/services/design")
+      +icon("/etc", "Design", "/services/design")
+      +icon("/etc", "Design", "/services/design")
+      +icon("/etc", "Design", "/services/design")

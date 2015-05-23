@@ -145,6 +145,19 @@ a img {
   min-width: 980px;
   max-width: 980px;
 }
+.sub-bar {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+}
+.sub-bar .container {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  margin: 0 auto;
+  width: 920px;
+  min-width: 920px;
+  max-width: 920px;
+}
 /*
  * HTML5 NAV
  *
@@ -304,12 +317,6 @@ nav ul li {
  */
 .barTwo {
   background-color: #385397;
-}
-.barTwo .bioContainer {
-  padding-left: 60px;
-  padding-right: 60px;
-  padding-top: 100px;
-  padding-bottom: 100px;
 }
 .barTwo .bioContainer .bottom {
   zoom: 1;
@@ -480,6 +487,33 @@ nav ul li {
  */
 .barThree {
   background-color: #2a417d;
+}
+/*
+ * ICON ROW AND ICON
+ *
+ * Automated linked and subtitled icons
+ * and  a  container  to  automatically
+ * align them.
+ */
+.iconRow {
+  zoom: 1;
+}
+.iconRow:before,
+.iconRow:after {
+  content: "";
+  display: table;
+}
+.iconRow:after {
+  clear: both;
+}
+.iconRow .icon {
+  float: left;
+}
+.icon .image {
+  display: block;
+}
+.icon .subtitle {
+  display: block;
 }
 /*
  * TITLE STYLES
