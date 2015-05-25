@@ -90,3 +90,32 @@ body
   +sub-bar().barFive
 
     +title("Contact", "Ask Us Anything")
+
+    form
+      div.label
+          div.sec.message
+            span Name
+          div.sec.input
+            input(type="text" name="Name")
+      br
+
+      div.label
+          div.sec.message
+            span Email
+          div.sec.input
+            input(type="email" name="Email")
+      br
+
+      div.label
+          div.sec.message
+            span.spanArea Message
+          div.sec.input
+            textarea(name="TextArea")
+      br
+
+      div.label
+          div.sec.message
+            span.spanArea 
+          div.sec.submit
+            input(type="submit" name="Submit")
+      br

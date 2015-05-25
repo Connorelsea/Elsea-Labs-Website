@@ -284,17 +284,12 @@ nav ul li {
   padding-left: 50px;
 }
 .barOne .sliderPanel .slide_xshot .group {
+  position: relative;
   width: 300px;
   min-width: 300px;
   max-width: 300px;
   float: right;
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(50%);
-  -moz-transform: translateY(50%);
-  -o-transform: translateY(50%);
-  -ms-transform: translateY(50%);
-  transform: translateY(50%);
+  margin-top: -220px;
 }
 .barOne .sliderPanel .slide_xshot .title h2 {
   font-size: 7em;
@@ -583,6 +578,7 @@ nav ul li {
  * BAR FOUR
  */
 .barFour {
+  padding-bottom: 60px;
   background-color: #385397;
 }
 /*
@@ -595,6 +591,43 @@ nav ul li {
  */
 .barFive {
   background-color: #2a417d;
+}
+.barFive form {
+  width: 800px;
+  min-width: 800px;
+  max-width: 800px;
+}
+.barFive form .label {
+  display: table-cell;
+  padding: 20px;
+}
+.barFive form .label .sec {
+  display: inline-block;
+  vertical-align: middle;
+}
+.barFive form .label .message {
+  width: 150px;
+  min-width: 150px;
+  max-width: 150px;
+  text-align: right;
+  padding-right: 20px;
+  font-family: Helvetica;
+  font-size: 1.6em;
+  color: #fff;
+}
+.barFive form .label input,
+.barFive form .label textarea {
+  padding: 10px;
+  width: 500px;
+  min-width: 500px;
+  max-width: 500px;
+  font-family: Helvetica;
+  font-size: 1.6em;
+  color: #19274b;
+  background-color: #849bd4;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #849bd4;
 }
 /*
  * GLOBAL PARAGRAPH STYLING
