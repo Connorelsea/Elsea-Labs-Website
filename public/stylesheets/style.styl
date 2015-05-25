@@ -119,7 +119,7 @@ first-blue  = #ccc
     width(100%)
   to
     width(104%)
-    
+
 /*
  * ABSTRACTED BAR
  *
@@ -410,23 +410,23 @@ nav
   background-color dark-blue
   
   form
-    width(800px)
+    width(662px)
+    margin auto
     
     .label
-      display table-cell
-      padding 20px
+      paddingVertical(20px)
       
       .sec
         display inline-block
         vertical-align middle
         
       .message
-        width(150px)
+        width(120px)
         text-align right
         padding-right 20px
 
         font-family Helvetica
-        font-size 1.6em
+        font-size 1.3em
         color white
         
       input, textarea
@@ -434,12 +434,39 @@ nav
         width(500px)
       
         font-family Helvetica
-        font-size 1.6em
+        font-size 1.3em
         color darken(dark-blue, 40%)
         background-color light-blue
         
         border-radius 5px
         border 1px solid light-blue
+        
+        transition: all 0.3s ease-in-out
+        
+      input:focus, textarea:focus
+          border-color light-blue
+          background-color lighten(light-blue, 20%)
+          box-shadow 0px 0px 40px third-blue
+        
+      textarea
+        height(150px)
+        
+      .submit
+        float right
+        
+        input
+          width(200px)
+          padding 10px
+          
+          border-radius 5px
+          border 1px solid light-blue
+          transition: all 0.3s ease-in-out
+        
+        :hover
+          border-color light-blue
+          background-color dark-blue
+          color light-blue
+          box-shadow 0px 0px 40px third-blue
 
 /*
  * GLOBAL PARAGRAPH STYLING

@@ -1,6 +1,7 @@
 var express = require("express"),
     stylus  = require("stylus"),
-    nib     = require("nib")
+    nib     = require("nib"),
+    body    = require("body-parser")
 
 var app = express()
 
@@ -10,6 +11,10 @@ function compile(str, path)
     .set('filename', path)
     .use(nib())
 }
+
+app.use(body.urlencoded({
+	extended: false
+}));
 
 app.set('views', __dirname + '/views')
 app.set('view engine', 'jade')
@@ -37,6 +42,13 @@ app.get('/', function(req, res)
 		services: data.services
 	})
 });
+
+app.post('/contact', function(req, res) {
+	console.log(req.body.Name)
+	console.log(req.body.Email)
+	console.log(req.body.TextArea)
+	res.redirect("/")
+})
 
 app.listen(1337, function()
 {
