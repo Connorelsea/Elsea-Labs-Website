@@ -18,6 +18,14 @@
 global-reset()
 
 /*
+ * Style selector globally
+ */
+ 
+.bar::selection
+  color dark-blue
+  background-color dark-blue
+
+/*
  * Fonts
  */
  
@@ -90,6 +98,18 @@ first-blue  = #ccc
     background-color third-blue
     color white
     
+
+/*
+ * IPHONE SCREEN ANIMATION
+ */
+ 
+@keyframes color-change
+  from
+    background-color third-blue
+  to
+    background-color darken(dark-blue, 10%)
+ 
+
 /*
  * NAVIGATION BAR ANIMATIONS
  */
@@ -267,15 +287,6 @@ nav
     .bottom
       clearfix()
       font-family Helvetica
-      
-      .paragraph
-        float left
-        width 50%
-        
-        color white
-        font-size 1.3em
-        font-weight light
-        line-height 1.5em
         
       .skills
         float right
@@ -322,54 +333,63 @@ nav
 
 /*
  * BAR THREE
- *
- * Bar Three consists  of  the  sub-sets
- * of services that I  provide. They are
- * represented by large icons.  The  CSS
- * should be created such that the icons
- * are easily changeable.
  */
-        
+ 
 .barThree
   background-color dark-blue
   
-  .iconRow
-    width(920px)
+  .left
+    clearfix()
     
-    .iconRowContainer
-      margin 0 auto
-      width(97%)
-    
-      .icon
+    .indicators
+      display block
+      float left
+      clear both
+      
+      padding-top 15px
+      
+      svg
         display inline-block
-        paddingVertical(20px)
-        paddingHorizontal(40px)
-        width(140px)
+        width 20px
+        height 20px
         
-        .link
-          width(inherit)
-          text-decoration none
+        circle
+          cx 10
+          cy 10
+          r 5
+          fill light-blue
+          
+        circle:hover
+          fill third-blue
+          
+    .phoneContainer
+      position relative
+      width 0
+      height 0
+      
+      .phone
+        position absolute
+        top -150px
+        left 600px
         
-          .image
-            width(inherit)
-            
-          .subtitle
-            padding-top 20px
-            
-            font-size 1.1em
-            font-family Helvetica
-            font-weight bold
-            text-transform uppercase
-            text-align center
-            letter-spacing .2em
-            
-            color light-blue
+      .phoneScreen
+        position absolute
+        top -70px
+        left 622px
+        
+        width(221px)
+        height(400px)
+        
+        background-color third-blue
+        
+        animation-name color-change
+        animation-duration 1s
+        animation-iteration-count infinite
+        animation-direction alternate
+
 
 /*
  * BAR FOUR
- *
- * Bar four consists of information about
- * Elsea's clients
  */
  
 .barFour
@@ -388,6 +408,24 @@ nav
   background-color dark-blue
 
 /*
+ * GLOBAL PARAGRAPH STYLING
+ */
+ 
+.paragraph
+  display block
+  
+  font-family Helvetica
+  font-weight light
+
+  float left
+  width 50%
+        
+  color white
+  font-size 1.3em
+  font-weight light
+  line-height 1.5em
+
+/*
  * ICON ROW AND ICON
  *
  * Automated linked and subtitled icons
@@ -398,15 +436,22 @@ nav
 .iconRow
   
   .iconRowContainer
+    text-align center
+    margin 0 auto
     clearfix()
-
      
 .icon
-  
   .image
-    display block
+    display inline-block
   .subtitle
     display block
+    
+.clientIcon
+  display inline-block
+  verticalCenter()
+  
+.clientIcon:not(:first-child)
+  padding-left 75px
 
 /*
  * TITLE STYLES

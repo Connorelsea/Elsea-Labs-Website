@@ -30,10 +30,11 @@ app.get('/', function(req, res)
 	{
 		websiteTitle: "Elsea",
 		websiteName:  "Elsea",
-		links: data.linkNames,
-		bio: data.bio,
+		links:    data.linkNames,
+		bio:      data.bio,
 		subtitle: data.subtitle,
-		skills: data.skills
+		skills:   data.skills,
+		services: data.services
 	})
 });
 

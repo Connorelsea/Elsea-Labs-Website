@@ -42,7 +42,7 @@ body
 
   +sub-bar().barTwo
 
-     div.bioContainer
+    div.bioContainer
 
       +title("I'm Connor Elsea", subtitle)
 
@@ -58,13 +58,25 @@ body
 
   +sub-bar().barThree
 
-    +title("Services", "Available for Hire")
+    div.servicesContainer
+      
+      +title("Services", "AVAILABLE FOR HIRE")
 
-    +iconRow()
-      +icon("images/icons/heart.png", "Design",   "/services/design")
-      +icon("images/icons/gear.png",  "Software", "/services/software")
-      +icon("images/icons/web.png",   "Web",      "/services/web")
-      +icon("images/icons/more.png",  "more",     "/services")
+      div.left
+
+        div.paragraph
+          p #{services[0].content}
+
+        div.indicators
+          each val in services
+            svg.svgIndicator
+              circle.indicator
+
+        div.phoneContainer
+          img.phone(src= "images/iphone.png")
+
+          div.phoneScreen
+
 
   +sub-bar().barFour
 
@@ -72,6 +84,8 @@ body
 
     +iconRow()
       +clientIcon("images/clients/bw.png")
+      +clientIcon("images/clients/passnote.png")
+      +clientIcon("images/clients/postdigital.png")
 
   +sub-bar().barFive
 

@@ -64,6 +64,13 @@ mixin title(x, y)
 		h1.sub.main #{x}
 		h3.sub.subtitle  #{y}
 
+mixin paragraph(x)
+	.paragraph
+		if x
+			p #{x}
+		else
+			+error("No text specified for paragraph")
+
 mixin icon(icon, subtitle, link)
 	div.icon
 		a.link(href= link)

@@ -103,6 +103,13 @@ a img {
   border: none;
 }
 /*
+ * Style selector globally
+ */
+.bar::selection {
+  color: dark-blue;
+  background-color: dark-blue;
+}
+/*
  * Fonts
  */
 @font-face {
@@ -131,6 +138,9 @@ a img {
  * BUTTON ANIMATIONS
  *
  * Button animations throughout the website.
+ */
+/*
+ * IPHONE SCREEN ANIMATION
  */
 /*
  * NAVIGATION BAR ANIMATIONS
@@ -346,16 +356,6 @@ nav ul li {
 .barTwo .bioContainer .bottom:after {
   clear: both;
 }
-.barTwo .bioContainer .bottom .paragraph {
-  float: left;
-  width: 50%;
-  min-width: 50%;
-  max-width: 50%;
-  color: #fff;
-  font-size: 1.3em;
-  font-weight: light;
-  line-height: 1.5em;
-}
 .barTwo .bioContainer .bottom .skills {
   float: right;
 }
@@ -494,63 +494,93 @@ nav ul li {
 }
 /*
  * BAR THREE
- *
- * Bar Three consists  of  the  sub-sets
- * of services that I  provide. They are
- * represented by large icons.  The  CSS
- * should be created such that the icons
- * are easily changeable.
  */
 .barThree {
   background-color: #2a417d;
 }
-.barThree .iconRow {
-  width: 920px;
-  min-width: 920px;
-  max-width: 920px;
+.barThree .left {
+  zoom: 1;
 }
-.barThree .iconRow .iconRowContainer {
-  margin: 0 auto;
-  width: 97%;
-  min-width: 97%;
-  max-width: 97%;
+.barThree .left:before,
+.barThree .left:after {
+  content: "";
+  display: table;
 }
-.barThree .iconRow .iconRowContainer .icon {
+.barThree .left:after {
+  clear: both;
+}
+.barThree .left .indicators {
+  display: block;
+  float: left;
+  clear: both;
+  padding-top: 15px;
+}
+.barThree .left .indicators svg {
   display: inline-block;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 40px;
-  padding-right: 40px;
-  width: 140px;
-  min-width: 140px;
-  max-width: 140px;
+  width: 20px;
+  min-width: 20px;
+  max-width: 20px;
+  height: 20px;
+  min-height: 20px;
+  max-height: 20px;
 }
-.barThree .iconRow .iconRowContainer .icon .link {
-  width: inherit;
-  min-width: inherit;
-  max-width: inherit;
-  text-decoration: none;
+.barThree .left .indicators svg circle {
+  cx: 10;
+  cy: 10;
+  r: 5;
+  fill: #849bd4;
 }
-.barThree .iconRow .iconRowContainer .icon .link .image {
-  width: inherit;
-  min-width: inherit;
-  max-width: inherit;
+.barThree .left .indicators svg circle:hover {
+  fill: #385397;
 }
-.barThree .iconRow .iconRowContainer .icon .link .subtitle {
-  padding-top: 20px;
-  font-size: 1.1em;
-  font-family: Helvetica;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 0.2em;
-  color: #849bd4;
+.barThree .left .phoneContainer {
+  position: relative;
+  width: 0;
+  min-width: 0;
+  max-width: 0;
+  height: 0;
+  min-height: 0;
+  max-height: 0;
+}
+.barThree .left .phoneContainer .phone {
+  position: absolute;
+  top: -150px;
+  left: 600px;
+}
+.barThree .left .phoneContainer .phoneScreen {
+  position: absolute;
+  top: -70px;
+  left: 622px;
+  width: 221px;
+  min-width: 221px;
+  max-width: 221px;
+  height: 400px;
+  min-height: 400px;
+  max-height: 400px;
+  background-color: #385397;
+  -webkit-animation-name: color-change;
+  -moz-animation-name: color-change;
+  -o-animation-name: color-change;
+  -ms-animation-name: color-change;
+  animation-name: color-change;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -moz-animation-direction: alternate;
+  -o-animation-direction: alternate;
+  -ms-animation-direction: alternate;
+  animation-direction: alternate;
 }
 /*
  * BAR FOUR
- *
- * Bar four consists of information about
- * Elsea's clients
  */
 .barFour {
   background-color: #385397;
@@ -567,6 +597,22 @@ nav ul li {
   background-color: #2a417d;
 }
 /*
+ * GLOBAL PARAGRAPH STYLING
+ */
+.paragraph {
+  display: block;
+  font-family: Helvetica;
+  font-weight: light;
+  float: left;
+  width: 50%;
+  min-width: 50%;
+  max-width: 50%;
+  color: #fff;
+  font-size: 1.3em;
+  font-weight: light;
+  line-height: 1.5em;
+}
+/*
  * ICON ROW AND ICON
  *
  * Automated linked and subtitled icons
@@ -574,6 +620,8 @@ nav ul li {
  * align them.
  */
 .iconRow .iconRowContainer {
+  text-align: center;
+  margin: 0 auto;
   zoom: 1;
 }
 .iconRow .iconRowContainer:before,
@@ -585,10 +633,23 @@ nav ul li {
   clear: both;
 }
 .icon .image {
-  display: block;
+  display: inline-block;
 }
 .icon .subtitle {
   display: block;
+}
+.clientIcon {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(50%);
+  -moz-transform: translateY(50%);
+  -o-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+}
+.clientIcon:not(:first-child) {
+  padding-left: 75px;
 }
 /*
  * TITLE STYLES
@@ -846,6 +907,38 @@ nav ul li {
   to {
     background-color: #385397;
     color: #fff;
+  }
+}
+@-moz-keyframes color-change {
+  from {
+    background-color: #385397;
+  }
+  to {
+    background-color: #263b70;
+  }
+}
+@-webkit-keyframes color-change {
+  from {
+    background-color: #385397;
+  }
+  to {
+    background-color: #263b70;
+  }
+}
+@-o-keyframes color-change {
+  from {
+    background-color: #385397;
+  }
+  to {
+    background-color: #263b70;
+  }
+}
+@keyframes color-change {
+  from {
+    background-color: #385397;
+  }
+  to {
+    background-color: #263b70;
   }
 }
 @-moz-keyframes nav-button {
