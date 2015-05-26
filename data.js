@@ -26,7 +26,7 @@ var bio = "I’m a 17 year old student and software developer from Baton Rouge, 
 var services = [
 	{
 		name: "Web Design",
-		content: "From server code to the front end, Elsea has you covered. We are knowledgeable in all facets of the web development process and can fulfill any needs you may encounter."
+		content: "From graphic design, to web development. From from small javascript applications, to enterprise Java. From branding to online media. Elsea has you covered. We are a technology company who can help you create realizations of your ideas."
 	},
 	{
 		name: "Software Development",

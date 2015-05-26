@@ -17,8 +17,8 @@ body
         div.title
           +image("images/elsea.png", 350, 44)
 
-        nav
-          +list(linkArray).menuParent
+        //- nav
+        //-   +list(linkArray).menuParent
 
      div.sliderPanel
       +slider().mainSlider
@@ -53,7 +53,7 @@ body
         div.skills
           +skillList(skills)
 
-      +tinyButton("/", "More Information...")
+      +tinyButton("https://www.linkedin.com/in/elsea", "More Information...")
 
   +sub-bar().barThree
 
@@ -66,10 +66,10 @@ body
         div.paragraph
           p #{services[0].content}
 
-        div.indicators
-          each val in services
-            svg.svgIndicator
-              circle.indicator
+        //- div.indicators
+        //-   each val in services
+        //-     svg.svgIndicator
+        //-       circle.indicator
 
         div.phoneContainer
           +image("images/iphone.png", 261, 547)
@@ -89,6 +89,8 @@ body
   +sub-bar().barFive
 
     +title("Contact", "Ask Us Anything")
+
+    +error("Note that this contact section is non-functional. This website is currently under construction and is only online to demonstrate my work with HTML/CSS/Node.JS. If you would like to contact me, please contact me at connorelsea@gmail.com. Thank you.")
 
     form(action="/contact", method="post")
       div.label

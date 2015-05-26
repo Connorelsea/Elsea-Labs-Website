@@ -795,17 +795,18 @@ nav ul li {
  * missing block occurs.
  */
 .error {
-  display: inline;
-  padding: 10px;
-  color: #800000;
-  font-family: sans-serif;
-  background-color: #ffb2b2;
-  border: 1px solid #800000;
+  display: block;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #849bd4;
+  font-family: Helvetica;
+  font-size: 1.1em;
+  letter-spacing: 0.05em;
+  line-height: 1.5em;
+  background-color: #2a417d;
+  border: 1px solid #849bd4;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  width: 200px;
-  min-width: 200px;
-  max-width: 200px;
 }
 @-moz-keyframes bar-slide-hundred {
   from {
