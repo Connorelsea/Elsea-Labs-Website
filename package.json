@@ -1,11 +1,19 @@
 {
   "name": "ElseaLabs",
   "version": "0.0.1",
-  "private": "true",
+  "description": "Elsea Labs company website and portfolio",
   "dependencies": {
+    "body-parser": "^1.12.4",
     "express": "3.0.0alpha4",
     "jade": "*",
-    "stylus": "*",
-    "nib": "*"
-  }
+    "nib": "*",
+    "stylus": "*"
+  },
+  "author": {
+    "name": "ConnorElsea",
+    "email": "connor@elsealabs.com",
+    "url": "http://www.elsealabs.com/"
+  },
+  "private": false,
+  "main": "server.js"
 }
