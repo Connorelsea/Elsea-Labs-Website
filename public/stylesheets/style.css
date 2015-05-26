@@ -245,24 +245,31 @@ nav ul li {
   max-width: 250px;
 }
 .barOne .headerPanel .headerContainer nav {
-  margin-top: 20px;
   float: right;
 }
 .barOne .headerPanel .headerContainer nav ul li {
+  min-width: 120px;
+  display: block;
+  float: left;
+  line-height: 50px;
   font-family: Helvetica;
   font-size: 1.3em;
   font-weight: light;
-  padding-left: 40px;
+  text-align: center;
   padding-top: 10px;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: font-size 0.5s, font-weight 0.2s;
+  -moz-transition: font-size 0.5s, font-weight 0.2s;
+  -o-transition: font-size 0.5s, font-weight 0.2s;
+  -ms-transition: font-size 0.5s, font-weight 0.2s;
+  transition: font-size 0.5s, font-weight 0.2s;
+}
+.barOne .headerPanel .headerContainer nav ul li a {
+  text-decoration: none;
+  color: #385397;
 }
 .barOne .headerPanel .headerContainer nav ul li:hover {
-  cursor: pointer;
   font-size: 1.7em;
+  cursor: pointer;
   font-weight: bold;
 }
 .barOne .sliderPanel {
@@ -537,7 +544,7 @@ nav ul li {
   min-height: 0;
   max-height: 0;
 }
-.barThree .left .phoneContainer .phone {
+.barThree .left .phoneContainer .img {
   position: absolute;
   top: -150px;
   left: 600px;

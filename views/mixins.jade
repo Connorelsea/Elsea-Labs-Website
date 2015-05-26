@@ -7,7 +7,8 @@
 mixin list(list)
 	ul
 		each val in list
-			li(class!=attributes.class)= val
+			li(class!=attributes.class)
+				a(href= val.link)= val.name
 
 //-
 	Creates the commonly used bar div and
@@ -77,10 +78,10 @@ mixin icon(icon, subtitle, link)
 			img.image(src= icon)
 			h3.subtitle #{subtitle}
 
-mixin clientIcon(icon)
+mixin clientIcon(icon, width, height)
 	div.icon.clientIcon
 		a.link(src= "/services")
-			img.img(src= icon)
+			+image(icon, width, height)
 
 mixin iconRow()
 	div.iconRow

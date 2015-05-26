@@ -16,10 +16,9 @@ body
 
         div.title
           +image("images/elsea.png", 350, 44)
-          // h1 #{websiteName}
 
         nav
-          +list(links).menuParent
+          +list(linkArray).menuParent
 
      div.sliderPanel
       +slider().mainSlider
@@ -73,7 +72,8 @@ body
               circle.indicator
 
         div.phoneContainer
-          img.phone(src= "images/iphone.png")
+          +image("images/iphone.png", 261, 547)
+          //img.phone(src= "images/iphone.png")
 
           div.phoneScreen
 
@@ -83,9 +83,8 @@ body
     +title("Clients", "Our Happy Customers")
 
     +iconRow()
-      +clientIcon("images/clients/bw.png")
-      +clientIcon("images/clients/passnote.png")
-      +clientIcon("images/clients/postdigital.png")
+      each val in clients
+        +clientIcon(val.link, val.width, val.height)
 
   +sub-bar().barFive
 

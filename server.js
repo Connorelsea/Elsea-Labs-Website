@@ -38,11 +38,13 @@ app.get('/', function(req, res)
 	{
 		websiteTitle: "Elsea",
 		websiteName:  "Elsea",
-		links:    data.linkNames,
-		bio:      data.bio,
-		subtitle: data.subtitle,
-		skills:   data.skills,
-		services: data.services
+		links:     data.linkNames,
+		linkArray: data.linkArray,
+		bio:       data.bio,
+		subtitle:  data.subtitle,
+		skills:    data.skills,
+		services:  data.services,
+		clients:   data.clients,
 	})
 });
 

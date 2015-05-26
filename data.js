@@ -1,36 +1,24 @@
+var linkNames = [
+	"home", "software", "blog", "about"
+]
+
 var linkArray = [
 	{
 		name: "home",
-		link: "/",
-		sub: {
-			type: "none"
-		}
+		link: "/"
 	},
 	{
 		name: "software",
-		link: "/software",
-		sub:
-		{
-			type: "large",
-			links: [
-				{
-					name: "XShot",
-					link: "/software/xshot"
-				}
-			]
-		}
+		link: "/software"
 	},
 	{
 		name: "blog",
-		link: "/blog",
-		sub: {
-			type: "none"
-		}
+		link: "/blog"
+	},
+	{
+		name: "about",
+		link: "/about"
 	}
-]
-
-var linkNames = [
-	"home", "software", "blog", "about"
 ]
 
 var bio = "I’m a 17 year old student and software developer from Baton Rouge, Louisiana with a passion for beautiful interfaces, game design, software development, and art."
@@ -71,11 +59,30 @@ var skills = [
 	}
 ]
 
+var clients = [
+	{
+		link:   "images/clients/bw.png",
+		width:  104,
+		height: 110
+	},
+	{
+		link:   "images/clients/passnote.png",
+		width:  303,
+		height: 72
+	},
+	{
+		link:   "images/clients/postdigital.png",
+		width:  253,
+		height: 39
+	}
+]
+
 module.exports = {
 	linkArray: linkArray,
 	linkNames: linkNames,
 	bio: bio,
 	subtitle: subtitle,
 	skills: skills,
-	services: services
+	services: services,
+	clients: clients
 }

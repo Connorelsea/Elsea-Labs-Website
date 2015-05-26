@@ -196,21 +196,30 @@ nav
          * The navigation and its elements
          */
         nav
-          margin-top 20px
           float right
           
           ul li
+            min-width 120px
+            display block
+            float left
+            
+            line-height 50px
             font-family Helvetica
             font-size 1.3em
             font-weight light
-            padding-left 40px
+            text-align center
+            
             padding-top 10px
             
-            transition: all 0.2s ease-in-out
+            transition: font-size .5s, font-weight .2s
+
+            a
+              text-decoration none
+              color third-blue
             
           ul li:hover
-            cursor pointer
             font-size 1.7em
+            cursor pointer
             font-weight bold
             
     
@@ -368,7 +377,7 @@ nav
       width 0
       height 0
       
-      .phone
+      .img
         position absolute
         top -150px
         left 600px
